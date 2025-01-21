@@ -36,4 +36,20 @@ Network Security Groups. <br />
 
 <h3> STEP 1.0: Create the Windows 10 VM in Azure with at Least 2 Virtual CPU's (vCPU) and 8 GiB of Memory </h3>
 
-- 
+- Access the [Azure portal](https://portal.azure.com) to begin creating your VM.
+- Under the "Basics" tab:
+  - Ensure to create a Resource Group (RG) and a Subscription (if needed) while creating the VM
+    - The VM will be placed into this RG (consider it a folder for your Azure resources).
+    - Name the VM
+    - Place it in the region closest to you
+    - Select Windows 10 Pro 22H2 for the VM's operating system image
+
+  ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
+
+
+  - Navigate to the "Networking" tab:
+    - (Create a new Virtual Network (Vnet) and subnet)
+    - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
+
+  ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
+
