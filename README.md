@@ -47,8 +47,8 @@ Network Security Groups. <br />
   ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
 
 
-  - Navigate to the "Networking" tab:
-    - (Create a new Virtual Network (Vnet) and subnet)
+- Navigate to the "Networking" tab:
+    - Create a new Virtual Network (Vnet) and subnet
     - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
 
   ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
