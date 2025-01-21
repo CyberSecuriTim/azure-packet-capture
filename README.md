@@ -101,14 +101,40 @@ Network Security Groups. <br />
    - "Review + Create", once the validation has successfully passed then create the VM.
      - NOTE: you may receive this error message, simply return to the Basics tab and verify the configuration then "Review + Create" again.
        ![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
+       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 1.3: Harden the Ubuntu VM by Restricting the Source IP Addresses for SSH Connection </h3>
+
+- Within the VM's network settings:
+  - Modify the SSH rule in the network security group by restricting the IP addresses that can establish an SSH connection to the Ubuntu VM.
+  - I explicitly listed the private IP address of the Windows 10 VM (10.0.0.4)
+ 
+  ![image](https://github.com/user-attachments/assets/9c0d2be3-b433-4bb1-a793-31cbb26c78a5)
+
+ 
+   
+
+
+
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.3: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
+<h3> STEP 1.4: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
 
 - From the home page of the Azure portal:
   - Navigate to "Virtual Network" > (Name of the virtual network)
     - Select Monitoring > Diagram
-     
+
+- Verify that both VM's are connected within the same subnet.
+
 ![image](https://github.com/user-attachments/assets/ec570eea-a7bc-47a9-865e-0bc1c1974adc)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 1.5: Connect to the Windows 10 VM and Install Wireshark </h3>
+
+- Establish the Remote Desktop Connection to the 
