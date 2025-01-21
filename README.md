@@ -60,3 +60,13 @@ Network Security Groups. <br />
   ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
 
 - "Review + Create" and once the validation process has been passed create the VM.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 1.1: Harden the Windows 10 VM by Restricting the Source IP Addresses that can connect to it via RDP </h3>
+
+- Once the VM is created, navigate to its Network settings select the RDP rule configured in its Network Security Group ruleset.
+  - Change the allowed source IP addresses from any to "My IP address" to restrict the connection to only your current IP address
+  - Or you could select "IP Addresses" and specify an IP address(s) that you would like to connect from.
+ 
+![image](https://github.com/user-attachments/assets/8364fb65-a882-462e-8d9c-7a6a87073f5c)
