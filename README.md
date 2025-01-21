@@ -163,7 +163,7 @@ Network Security Groups. <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 2.1: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
+<h3> STEP 2.5: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
 
 - Run the command "ping (windows 10 vm ip address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
@@ -173,3 +173,6 @@ Network Security Groups. <br />
 
 
 - Notice all the ICMP packets that were captured and displayed by wireshark 
+- Observe the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP echo (ping) 
+  requests and vice versa for ICMP echo (ping) replies
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
