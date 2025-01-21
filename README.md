@@ -112,14 +112,6 @@ Network Security Groups. <br />
  
   ![image](https://github.com/user-attachments/assets/9c0d2be3-b433-4bb1-a793-31cbb26c78a5)
 
- 
-   
-
-
-
-
-
-
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -137,4 +129,7 @@ Network Security Groups. <br />
 
 <h3> STEP 1.5: Connect to the Windows 10 VM and Install Wireshark </h3>
 
-- Establish the Remote Desktop Connection to the 
+- Establish the remote desktop connection to the Windows 10 VM via its public IP address and your preferred RDP client.
+   - Use the admin account's credentials that were provisioned during the VM's creation. 
+
+![image](https://github.com/user-attachments/assets/f4abcfb0-a226-4182-939c-0f513e084e55)
