@@ -76,10 +76,11 @@ Network Security Groups. <br />
 <h3> STEP 1.2: Create the Ubuntu Virtual Machine. </h3>
 
 - Still within the [Azure portal](https://portal.azure.com) create another VM
-- Place it into the previously created Resource Group.
-- Name the virtual machine
-- Place it into the same region as the previously created VM.
-- Assign "Ubuntu Server 24.04 LTS" as the virtual machine's operating system image.
+  - Under the "Basics" tab: 
+    - Place it into the previously created Resource Group.
+    - Name the virtual machine
+    - Place it into the same region as the previously created VM.
+    - Assign "Ubuntu Server 24.04 LTS" as the virtual machine's operating system image.
 
 ![image](https://github.com/user-attachments/assets/6a498366-dfcb-42af-ae0e-c7bb8b9eacbe)
 
