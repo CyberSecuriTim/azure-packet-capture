@@ -138,5 +138,5 @@ Network Security Groups. <br />
 - Browse to the [wireshark download link](https://www.wireshark.org/download.html) within the Windows 10 VM.
   - Select the "Windows x64 Installer"
 
-![image](https://github.com/user-attachments/assets/867a8bf5-225a-4194-ae63-d7712f58b538)
+![image](https://github.com/user-attachments/assets/32c20bf3-52bb-4742-8792-bdcf68190a2a)
 
