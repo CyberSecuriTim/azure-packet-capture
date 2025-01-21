@@ -169,7 +169,8 @@ Network Security Groups. <br />
   - My Ubuntu VM's private IP address is 10.0.0.5
   - The "-t" parameter will run the ping command perpetually/non-stop until it is manually (Ctrl + C)
 
-![image](https://github.com/user-attachments/assets/59f5c7ef-e746-4a21-947c-af1f0ac556c1)
+![image](https://github.com/user-attachments/assets/4ec8af7d-56ad-4082-9849-422ecb15485a)
+
 
 
 - Notice all the ICMP packets that were captured and displayed by wireshark 
