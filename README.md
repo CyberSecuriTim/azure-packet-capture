@@ -150,4 +150,23 @@ Network Security Groups. <br />
 ![image](https://github.com/user-attachments/assets/baa9e310-aeaa-4b1b-9160-5d2c090454e3)
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+<h3> STEP 2.0: Open Wireshark and Filter for ICMP Network Traffic.</h3>
+
+- Open wireshark and filter for ICMP traffic exclusively.
+  - Right click the "Ethernet" network interface and select "Start capture"
+  - Enter "icmp" in the wireshark search bar.
+
+![image](https://github.com/user-attachments/assets/9f1656d6-c097-4359-a31f-79e0eee09e8b)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 2.1: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
+
+- Run the command "ping (windows 10 vm ip address) -t"
+  - My Ubuntu VM's private IP address is 10.0.0.5
+  - The "-t" parameter will run the ping command perpetually/non-stop until manually stopped (Ctrl + C)
+
+ ![image](https://github.com/user-attachments/assets/fa9688d2-7e1c-4699-9011-67b2cff970a5)
