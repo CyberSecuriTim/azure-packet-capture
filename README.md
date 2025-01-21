@@ -29,7 +29,8 @@ Network Security Groups. <br />
 - Step 3: Observe SSH Traffic
 - Step 4: Observe DHCP Traffic
 - Step 5: Observe DNS Traffic
-- Step 6: Observe RDP Traffic
+- Step 6: Observe HTTP vs HTTPS traffic
+- Step 7: Observe RDP Traffic
 
 <h2>Actions and Observations</h2>
 
