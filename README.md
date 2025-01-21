@@ -135,4 +135,4 @@ Network Security Groups. <br />
 ![image](https://github.com/user-attachments/assets/58dac6bf-8124-4846-b52d-fe2adbbe58e7)
 
 
-- Browse to the [wireshark download link](https://www.wireshark.org/download.html)
+- Browse to the [wireshark download link](https://www.wireshark.org/download.html) within the Windows 10 VM.
