@@ -70,3 +70,18 @@ Network Security Groups. <br />
   - Or you could select "IP Addresses" and specify an IP address(s) that you would like to connect from.
  
 ![image](https://github.com/user-attachments/assets/8364fb65-a882-462e-8d9c-7a6a87073f5c)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 1.2: Create the Ubuntu Virtual Machine. </h3>
+
+- Still within the [Azure portal](https://portal.azure.com) create another VM
+- Place it into the previously created Resource Group.
+- Name the virtual machine
+- Place it into the same region as the previously created VM.
+- Assign "Ubuntu Server 24.04 LTS" as the virtual machine's operating system image.
+
+![image](https://github.com/user-attachments/assets/6a498366-dfcb-42af-ae0e-c7bb8b9eacbe)
+
+
+
