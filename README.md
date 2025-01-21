@@ -132,4 +132,5 @@ Network Security Groups. <br />
 - Establish the remote desktop connection to the Windows 10 VM via its public IP address and your preferred RDP client.
    - Use the admin account's credentials that were provisioned during the VM's creation. 
 
-![image](https://github.com/user-attachments/assets/f4abcfb0-a226-4182-939c-0f513e084e55)
+![image](https://github.com/user-attachments/assets/58dac6bf-8124-4846-b52d-fe2adbbe58e7)
+
