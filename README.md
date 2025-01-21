@@ -47,7 +47,7 @@ Network Security Groups. <br />
 
   ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
 
-    - Set the VM's specification to be at least 2 Virtual CPU's (vcpu's) and 8 GiB (gigabytes) of memory.
+    - Set the VM's Size to be at least 2 Virtual CPU's (vcpu's) and 8 GiB (gigabytes) of memory.
     - Assign the credentials to the local administrator account that will be created for this VM.
     - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
 
@@ -87,3 +87,19 @@ Network Security Groups. <br />
 
 
 
+   - Change the "Authentication type" for the local administrator account from "SSH public key" to "Password"
+   - Provision login credentials for the admin account.
+   - Select port 22 as an allowed inbound port
+     - This will enable us to establish an SSH (Secure Shell) connection to the Ubuntu VM.
+    
+
+   - Under the "Networking" tab:
+     - Ensure the Ubuntu VM is placed into the same virtual network (Vnet) and subnet as the Windows 10 VM.
+    
+![image](https://github.com/user-attachments/assets/5a299645-1e19-425f-8224-3eb9d7e15fca)
+
+   - "Review + Create", once the validation has successfully passed then create the VM.
+     - NOTE: you may receive this error message, simply return to the Basics tab and verify the configuration then "Review + Create" again.
+       ![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
+
+   -  
