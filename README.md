@@ -3,7 +3,9 @@
 </p>
 
 <h1> Manipulating Network Security Groups (NSGs) and Analyzing Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+
+- In this tutorial, we will observe network traffic of varying protol types being transmitted to and from Azure Virtual Machines using Wireshark as well as experimenting with 
+Network Security Groups. <br />
 
 
 
