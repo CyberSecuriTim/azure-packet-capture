@@ -35,7 +35,7 @@ Network Security Groups. <br />
 <h2>Actions and Observations</h2>
 
 
-<h3> STEP 1.0: Create the Windows 10 VM in Azure with at Least 2 Virtual CPU's (vCPU) and 8 GiB of Memory </h3>
+<h3> STEP 1.0: Create the Windows 10 VM in Azure. </h3>
 
 - Access the [Azure portal](https://portal.azure.com) to begin creating your VM.
 - Under the "Basics" tab:
@@ -47,6 +47,7 @@ Network Security Groups. <br />
 
   ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
 
+    - Set the VM's specification to be at least 2 Virtual CPU's (vcpu's) and 8 GiB (gigabytes) of memory.
     - Assign the credentials to the local administrator account that will be created for this VM.
     - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
 
