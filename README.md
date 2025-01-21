@@ -140,3 +140,14 @@ Network Security Groups. <br />
 
 ![image](https://github.com/user-attachments/assets/32c20bf3-52bb-4742-8792-bdcf68190a2a)
 
+- Open the Wireshark x64 Setup wizard.
+
+![image](https://github.com/user-attachments/assets/8ae35629-68f2-4070-afeb-cb74adc1c9a9)
+
+- Leave the default configurations and install the default components.
+- Install Npcap as well.
+
+![image](https://github.com/user-attachments/assets/baa9e310-aeaa-4b1b-9160-5d2c090454e3)
+
+
+
