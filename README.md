@@ -144,7 +144,7 @@ Network Security Groups. <br />
 
 ![image](https://github.com/user-attachments/assets/8ae35629-68f2-4070-afeb-cb74adc1c9a9)
 
-- Leave the default configurations and install the default components.
+- The default configurations can be left unchanged and install the default components.
 - Install Npcap as well.
 
 ![image](https://github.com/user-attachments/assets/baa9e310-aeaa-4b1b-9160-5d2c090454e3)
