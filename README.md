@@ -64,7 +64,7 @@ Network Security Groups. <br />
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.1: Harden the Windows 10 VM by Restricting the Source IP Addresses that can Connect to it via RDP </h3>
+<h3> STEP 1.15: Harden the Windows 10 VM by Restricting the Source IP Addresses that can Connect to it via RDP </h3>
 
 - Once the VM is created, navigate to its Network settings select the RDP rule configured in its Network Security Group ruleset.
   - Change the allowed source IP addresses from any to "My IP address" to restrict the RDP connection to only originate from your current IP address
@@ -74,7 +74,7 @@ Network Security Groups. <br />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.2: Create the Ubuntu Virtual Machine. </h3>
+<h3> STEP 1.30: Create the Ubuntu Virtual Machine. </h3>
 
 - Still within the [Azure portal](https://portal.azure.com) create another VM
   - Under the "Basics" tab: 
@@ -104,7 +104,7 @@ Network Security Groups. <br />
        
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.3: Harden the Ubuntu VM by Restricting the Source IP Addresses for SSH Connection </h3>
+<h3> STEP 1.45: Harden the Ubuntu VM by Restricting the Source IP Addresses for SSH Connection </h3>
 
 - Within the VM's network settings:
   - Modify the SSH rule in the network security group by restricting the IP addresses that can establish an SSH connection to the Ubuntu VM.
@@ -115,7 +115,7 @@ Network Security Groups. <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.4: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
+<h3> STEP 1.60: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
 
 - From the home page of the Azure portal:
   - Navigate to "Virtual Network" > (Name of the virtual network)
@@ -127,7 +127,7 @@ Network Security Groups. <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 1.5: Connect to the Windows 10 VM and Install Wireshark </h3>
+<h3> STEP 1.75: Connect to the Windows 10 VM and Install Wireshark </h3>
 
 - Establish the remote desktop connection to the Windows 10 VM via its public IP address and your preferred RDP client.
    - Use the admin account's credentials that were provisioned during the VM's creation. 
@@ -167,6 +167,9 @@ Network Security Groups. <br />
 
 - Run the command "ping (windows 10 vm ip address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
-  - The "-t" parameter will run the ping command perpetually/non-stop until manually stopped (Ctrl + C)
+  - The "-t" parameter will run the ping command perpetually/non-stop until it is manually (Ctrl + C)
 
- ![image](https://github.com/user-attachments/assets/fa9688d2-7e1c-4699-9011-67b2cff970a5)
+![image](https://github.com/user-attachments/assets/59f5c7ef-e746-4a21-947c-af1f0ac556c1)
+
+
+- Notice all the ICMP packets that were captured and displayed by wireshark 
