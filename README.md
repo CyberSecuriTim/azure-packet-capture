@@ -46,10 +46,16 @@ Network Security Groups. <br />
 
   ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
 
+    - Assign the credentials to the local administrator account that will be created for this VM.
+    - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
 
+![image](https://github.com/user-attachments/assets/801bc238-83a5-4da5-ae89-5135182353d9)
+
+    
 - Navigate to the "Networking" tab:
     - Create a new Virtual Network (Vnet) and subnet
-    - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
+    - Ignore the security warning regarding exposing the RDP port to all IP addresses on the internet we will filter IP addresses in a later step. 
 
   ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
 
+- "Review + Create" and once the validation process has been passed create the VM.
