@@ -102,4 +102,13 @@ Network Security Groups. <br />
      - NOTE: you may receive this error message, simply return to the Basics tab and verify the configuration then "Review + Create" again.
        ![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
 
-   -  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 1.3: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
+
+- From the home page of the Azure portal:
+  - Navigate to "Virtual Network" > (Name of the virtual network)
+    - Select Monitoring > Diagram
+     
+![image](https://github.com/user-attachments/assets/ec570eea-a7bc-47a9-865e-0bc1c1974adc)
+
