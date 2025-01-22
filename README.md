@@ -286,12 +286,15 @@
 
 - NOTE: (Do freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
    assigned network parameters and then immediately requests a new IP address and other DHCP assigned network configurations from the DHCP server.
+     - You should be automatically reconnected afterwards.
      - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA"
         1. Discover
         2. Offer
         3. Request
         4. Acknowledge
       
+![image](https://github.com/user-attachments/assets/76dfc094-cc42-4089-9742-b4e26827efdb)
+
 
  
 
