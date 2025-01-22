@@ -239,11 +239,13 @@
 
 - NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface (CLI) of a remote host via a network connection.
 
-- Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
-         - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM. 
-
 - Enter "tcp.port == 22" or "ssh" in the wireshark search field.
   - SSH uses tcp port 22 for its remote connections
+
+- Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
+   - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM.
+           - Notice SSH traffic is already being captured before we even access to the ubuntu VM's CLI.
+
 
 - Type "yes" to continue the connection process
    - Enter the password for the local admin account (NOTE: the password will not be visible while typing)
