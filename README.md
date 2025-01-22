@@ -232,7 +232,18 @@
 
 - NOTE: Stop the perpetual ping on your windows 10 VM by entering (Ctrl + C)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+ <h3> Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark Filtering for SSH traffic. </h3>
 
- 
+-NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface of a remote host via a network connection.
+
+![image](https://github.com/user-attachments/assets/5d1657e1-a194-4d3d-a36f-60584959d49a)
+
+
+- Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
+         - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM. 
+
+  - Enter "tcp.port == 22" or "ssh" in the wireshark search field.
+          - SSH uses tcp port 22 for its remote connections
