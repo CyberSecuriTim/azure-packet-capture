@@ -254,7 +254,8 @@
 - You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the session. 
 
 
-![image](https://github.com/user-attachments/assets/6504bff2-edd8-44f6-befd-0f862e12153c)
+![image](https://github.com/user-attachments/assets/bddf8897-def5-4093-990c-6beae97eba46)
+
 
 
 - Type "exit" into the CLI when you are ready to terminate the SSH connection
