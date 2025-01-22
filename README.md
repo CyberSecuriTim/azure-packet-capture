@@ -232,12 +232,12 @@
 
 - NOTE: Stop the perpetual ping on your windows 10 VM by entering (Ctrl + C)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
- <h3> Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark Filtering for SSH traffic. </h3>
+ <h3> STEP 3.0: Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark Filtering for SSH traffic. </h3>
 
-- NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface of a remote host via a network connection.
+- NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface (CLI) of a remote host via a network connection.
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
          - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM. 
@@ -249,10 +249,18 @@
    - Enter the password for the local admin account (NOTE: the password will not be visible while typing)
  
 
-- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the 
-  session. 
+- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the session. 
+
 
 ![image](https://github.com/user-attachments/assets/6504bff2-edd8-44f6-befd-0f862e12153c)
 
+
+- Type "exit" into the CLI when you are ready to terminate the SSH connection
+
+![image](https://github.com/user-attachments/assets/5d2abbb2-8ba9-43a2-ac96-e86fac91165f)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 4.0: Initiate a New Packet Capture in Wireshark and Filter for DHCP (Dynamic Host Configuration Protocol) traffic. </h3>
 
 
