@@ -217,4 +217,6 @@
 ![image](https://github.com/user-attachments/assets/520fc9fb-3bb5-4267-825e-0b6d8fa231ca)
 
 
-- 
+- Observe the ICMP echo (ping) requests being blocked by the NSG in real time.
+
+![image](https://github.com/user-attachments/assets/7baf98c9-0dd8-457e-8fa1-ead805f6e9e0)
