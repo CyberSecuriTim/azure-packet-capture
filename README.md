@@ -239,7 +239,8 @@
 
 -NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface of a remote host via a network connection.
 
-![image](https://github.com/user-attachments/assets/5d1657e1-a194-4d3d-a36f-60584959d49a)
+![image](https://github.com/user-attachments/assets/5715e5d4-54e4-4126-a3dc-d45274ab466b)
+
 
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
