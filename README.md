@@ -230,6 +230,7 @@
 
 ![image](https://github.com/user-attachments/assets/a8d8c253-eb8d-4816-80c0-8337822edb65)
 
+- NOTE: Stop the perpetual ping on your windows 10 VM by entering (Ctrl + C)
 
 
 
