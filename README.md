@@ -287,7 +287,7 @@
 - NOTE: (Do freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
    assigned network parameters and then immediately requests a new IP address and other DHCP assigned network configurations from the DHCP server.
      - You should be automatically reconnected afterwards.
-     - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA"
+     - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA":
         1. Discover
         2. Offer
         3. Request
@@ -298,7 +298,21 @@
 
 
  
+<h3> STEP 5.0: Start a New Packet Capture in Wireshark and Filter for DNS Traffic. </h3>
+
+- Enter "dns" or "upd.port == 53" in the Wireshark search filter.
+   - The DNS (Domain Name System) service commonly runs on UDP port 53
+
+- From the command prompt, run the command "nslookup (domain name)" to perform DNS lookups for the IP addresses of various domains (such as goole.com, facebook.com, dinsey.com 
+   etc.)
+
+- Observe the DNS traffic that is captured in Wireshark. 
+
+![image](https://github.com/user-attachments/assets/1aea15f2-9143-4af9-ad63-711e37e46c99)
 
 
+<h4> OPTIONAL STEP: Run the command "ipconfig /all" and observe the DNS server's IP address and notice that it is the same IP address involved in the DNS communications captured 
+  in Wireshark. </h4>
 
+![image](https://github.com/user-attachments/assets/825ab05a-84c8-42d2-80f3-a769090296c5)
 
