@@ -252,6 +252,7 @@
 - You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the 
   session. 
 
-![image](https://github.com/user-attachments/assets/99f67470-e8c0-4a84-97bf-77d740627b15)
+![image](https://github.com/user-attachments/assets/6504bff2-edd8-44f6-befd-0f862e12153c)
+
 
 
