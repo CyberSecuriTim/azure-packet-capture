@@ -237,7 +237,7 @@
 
  <h3> Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark Filtering for SSH traffic. </h3>
 
--NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface of a remote host via a network connection.
+- NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface of a remote host via a network connection.
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
          - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM. 
@@ -247,5 +247,10 @@
 
 - Type "yes" to continue the connection process
    - Enter the password for the local admin account (NOTE: the password will not be visible while typing)
-
  
+
+- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the 
+  session. 
+
+ ![image](https://github.com/user-attachments/assets/196ec079-2c7f-4bb2-955f-a00c6475265d)
+
