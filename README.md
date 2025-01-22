@@ -196,7 +196,8 @@
 - Run the command "ping (windows 10 VM ip address) -t"
 - Initiate another ICMP packet capture in Wireshark as well. 
 
-![image](https://github.com/user-attachments/assets/718fbe9c-64b5-471c-b0cd-54fc97335dfc)
+![image](https://github.com/user-attachments/assets/24a2a509-7503-4dca-8d0c-10f89f844194)
+
 
 - Within the Azure portal, access the network settings for the Ubuntu VM and create a new inbound port rule within its network security group (NSG). 
 
