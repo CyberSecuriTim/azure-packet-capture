@@ -267,7 +267,7 @@
 
 <h3> STEP 4.0: Initiate a New Packet Capture in Wireshark and Filter for DHCP (Dynamic Host Configuration Protocol) traffic. </h3>
 
-- Enter either "dhcp", "udp.port == 67" or "udp.port == 68" in the wireshark filter.
+- Enter either "dhcp", "udp.port == 67" or "udp.port == 68" or "udp.port == 67 || upd.port == 68" in the wireshark filter.
    - DHCP servers use UDP port 67 for communication and DHCP clients use UDP port 68, so filtering using either port number will display DHCP the communication.
  
 <h4> OPTIONAL STEP: Enter the command "ipconfig /all" in command prompt or powershell and observe the IP address of the DHCP server. </h4>
