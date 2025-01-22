@@ -281,3 +281,20 @@
 
 
    ![image](https://github.com/user-attachments/assets/bf9a1b88-1885-44e5-bbfa-86d0dabc30e9)
+
+<h4> OPTIONAL STEP: If you would like to observe the entire DHCP process captured in Wireshark enter the command "ipconfig /release | ipconfig /renew"</h4>
+
+- NOTE: (Do freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
+   assigned network parameters and then immediately requests a new IP address and other DHCP assigned network configurations from the DHCP server.
+     - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA"
+        1. Discover
+        2. Offer
+        3. Request
+        4. Acknowledge
+      
+
+ 
+
+
+
+
