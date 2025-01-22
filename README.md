@@ -4,10 +4,10 @@
 
 <h1> Manipulating Network Security Groups (NSGs) and Analyzing Traffic Between Azure Virtual Machines</h1>
 
-- In this tutorial, we will observe network traffic of varying protol types being transmitted to and from Azure Virtual Machines using Wireshark as well as experimenting with 
-Network Security Groups. <br />
+- In this tutorial, we will observe network traffic of varying protol types being transmitted to and from Azure Virtual Machines using Wireshark as well as experimenting with Network Security Groups. <br />
 
-
+- NOTE: Network Security Groups (NSGs) are essentially access control lists that contain statically configured rules which regulate access to and from various computing 
+        resources in Azure.
 
 <h2>Environments and Technologies Used</h2>
 
@@ -108,7 +108,7 @@ Network Security Groups. <br />
 
 - Within the VM's network settings:
   - Modify the SSH rule in the network security group by restricting the IP addresses that can establish an SSH connection to the Ubuntu VM.
-  - I explicitly listed the private IP address of the Windows 10 VM (10.0.0.4)
+  - I explicitly listed the private IP address of the Windows 10 VM (10.0.0.4) as the allowed source IP address.
  
   ![image](https://github.com/user-attachments/assets/9c0d2be3-b433-4bb1-a793-31cbb26c78a5)
 
@@ -155,6 +155,7 @@ Network Security Groups. <br />
 <h3> STEP 2.0: Open Wireshark and Filter for ICMP Network Traffic.</h3>
 
 - Open wireshark and filter for ICMP traffic exclusively.
+  -This is the network protocol that the "ping" command line utility uses to perform its network diagnostic/troubleshooting operations  
   - Right click the "Ethernet" network interface and select "Start capture"
   - Enter "icmp" in the wireshark search bar.
 
@@ -163,9 +164,9 @@ Network Security Groups. <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3> STEP 2.5: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
+<h3> STEP 2.33: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
 
-- Run the command "ping (windows 10 vm ip address) -t"
+- Open the command prompt or powershell to run the command "ping (windows 10 vm ip address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
   - The "-t" parameter will run the ping command perpetually/non-stop until it is manually (Ctrl + C)
 
@@ -177,3 +178,36 @@ Network Security Groups. <br />
 - Observe the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP echo (ping) 
   requests and vice versa for ICMP echo (ping) replies
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 2.66: Attempt to Ping a Public IP address/domain such as Google's Domain (www.google.com) and Observe the ICMP Traffic in Wireshark </h3>
+
+- Restart the wireshark packet capture
+- Run the command "ping www.google.com"
+
+  ![image](https://github.com/user-attachments/assets/e87e3cac-b045-4c10-b815-2eda3918d5e8)
+
+  - Observe the source and destination IP addresses for ping requests and echoes respectively.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  <h3> STEP: 2.99: Initiate Another Perpetual Ping from the Windows 10 VM to the Ubuntu VM, then Modify the NSG Associated with the Ubuntu to Block Inbound ICMP Traffic 
+  </h3>
+
+- Run the command "ping (windows 10 VM ip address) -t"
+- Within the Azure portal, access the network settings for the Ubuntu VM and create a new inbound port rule within its network security group (NSG). 
+
+![image](https://github.com/user-attachments/assets/a9075852-3206-48bf-95d0-935c97ebca89)
+
+- Create a new Inbound security rule 
+- Assign a higher priority (lower number) to the new rule so it will be evaluated and executed earlier in the NSG ruleset.
+  - Select "ICMPv4" from the list of network protocols
+    - Notice that the destination port ranges field immediately gets filled with an * once ICMP is selected.
+    - This protocol does not use port numbers during its operations
+    - It operates directly on top of the IP protocol and does use a transport layer protocol (eg. TCP or UDP) which would require a port number to identify the 
+       particular application or service being used on the network. 
+  - Set the Action to "Deny"
+  - Name the NSG rule appropriately
+  - Add the rule
+
+![image](https://github.com/user-attachments/assets/520fc9fb-3bb5-4267-825e-0b6d8fa231ca)
+
