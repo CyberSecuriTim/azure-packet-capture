@@ -273,3 +273,11 @@
 <h4> OPTIONAL STEP: Enter the command "ipconfig /all" in command prompt or powershell and observe the IP address of the DHCP server. </h4>
 
 ![image](https://github.com/user-attachments/assets/86e053ec-724d-42b7-9cf2-8617d4e1a4ba)
+
+
+- Now, enter the command "ipconfig /renew" and observe the captured DHCP traffic
+   - This command simply renews the lease of the IP address that the DHCP client (our Windows 10 VM) received from the DHCP server.
+   - NOTE: The same IP address that we observed from the "ipconfig /all" command as the DHCP server appears here in the captured DHCP traffic. 
+
+
+   ![image](https://github.com/user-attachments/assets/bf9a1b88-1885-44e5-bbfa-86d0dabc30e9)
