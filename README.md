@@ -157,7 +157,7 @@
 - Open wireshark and filter for ICMP traffic exclusively.
   -This is the network protocol that the "ping" command line utility uses to perform its network diagnostic/troubleshooting operations  
   - Right click the "Ethernet" network interface and select "Start capture"
-  - Enter "icmp" in the wireshark search bar.
+  - Enter "icmp" in the wireshark search filter.
 
 ![image](https://github.com/user-attachments/assets/9f1656d6-c097-4359-a31f-79e0eee09e8b)
 
@@ -239,7 +239,7 @@
 
 - NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface (CLI) of a remote host via a network connection.
 
-- Enter "tcp.port == 22" or "ssh" in the wireshark search field.
+- Enter "tcp.port == 22" or "ssh" in the wireshark search filter.
   - SSH uses tcp port 22 for its remote connections
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
@@ -260,10 +260,13 @@
 
 - Type "exit" into the CLI when you are ready to terminate the SSH connection
 
-![image](https://github.com/user-attachments/assets/5d2abbb2-8ba9-43a2-ac96-e86fac91165f)
+![image](https://github.com/user-attachments/assets/265c50b8-1858-43f7-ab15-7f0fa788b27e)
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 4.0: Initiate a New Packet Capture in Wireshark and Filter for DHCP (Dynamic Host Configuration Protocol) traffic. </h3>
 
+- Enter either "dhcp", "udp.port == 67" or "udp.port == 68" in the wireshark filter.
+   - DHCP servers use UDP port 67 for communication and DHCP clients use UDP port 68, so filtering using either port number will display DHCP the communication. 
 
