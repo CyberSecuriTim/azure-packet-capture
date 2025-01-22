@@ -190,7 +190,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  <h3> STEP: 2.99: Initiate Another Perpetual Ping from the Windows 10 VM to the Ubuntu VM, then Modify the NSG Associated with the Ubuntu to Block Inbound ICMP Traffic 
+  <h3> STEP: 2.99: Initiate Another Perpetual Ping from the Windows 10 VM to the Ubuntu VM, then Modify the NSG Associated with the Ubuntu VM to Block Inbound ICMP Traffic 
   </h3>
 
 - Run the command "ping (windows 10 VM ip address) -t"
