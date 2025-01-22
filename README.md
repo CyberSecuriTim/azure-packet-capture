@@ -220,3 +220,18 @@
 - Observe the ICMP echo (ping) requests being blocked by the NSG in real time.
 
 ![image](https://github.com/user-attachments/assets/7baf98c9-0dd8-457e-8fa1-ead805f6e9e0)
+
+
+- Finally, Re-enable inbound ICMP traffic to the ubuntu VM by deleting the newly created NSG rule (or modifying it to allow ICMP traffic) in the Azure portal
+
+![image](https://github.com/user-attachments/assets/65710b93-049d-4e49-9cec-073c987b6ed6)
+
+- Observe that the ICMP request/response process begins working again...eventually😅 
+
+![image](https://github.com/user-attachments/assets/a8d8c253-eb8d-4816-80c0-8337822edb65)
+
+
+
+
+
+ 
