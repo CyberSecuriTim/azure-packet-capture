@@ -101,7 +101,7 @@
      - NOTE: you may receive this error message, simply return to the Basics tab and verify the configuration then "Review + Create" again.
        ![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
        
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 1.45: Harden the Ubuntu VM by Restricting the Source IP Addresses for SSH Connection </h3>
 
@@ -112,7 +112,7 @@
   ![image](https://github.com/user-attachments/assets/9c0d2be3-b433-4bb1-a793-31cbb26c78a5)
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 1.60: Observe the Topology of the created Virtual Network within the Network Wathcer </h3>
 
@@ -124,7 +124,7 @@
 
 ![image](https://github.com/user-attachments/assets/ec570eea-a7bc-47a9-865e-0bc1c1974adc)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 1.75: Connect to the Windows 10 VM and Install Wireshark </h3>
 
@@ -149,7 +149,7 @@
 ![image](https://github.com/user-attachments/assets/baa9e310-aeaa-4b1b-9160-5d2c090454e3)
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.0: Open Wireshark and Filter for ICMP Network Traffic.</h3>
 
@@ -161,7 +161,7 @@
 ![image](https://github.com/user-attachments/assets/9f1656d6-c097-4359-a31f-79e0eee09e8b)
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.33: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
 
@@ -176,7 +176,7 @@
 - Notice all the ICMP packets that were captured and displayed by wireshark 
 - Observe the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP echo (ping) 
   requests and vice versa for ICMP echo (ping) replies
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.66: Attempt to Ping a Public IP address/domain such as Google's Domain (www.google.com) and Observe the ICMP Traffic in Wireshark </h3>
 
@@ -187,9 +187,10 @@
 
   - Observe the source and destination IP addresses for ping requests and echoes respectively.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  <h3> STEP: 2.99: Initiate Another Perpetual Ping from the Windows 10 VM to the Ubuntu VM, then Modify the NSG Associated with the Ubuntu VM to Block Inbound ICMP Traffic 
+  <h3> STEP: 2.99: Initiate Another Perpetual Ping from the Windows 10 VM to the Ubuntu VM, then Modify the NSG Associated with the Ubuntu VM to Block Inbound 
+   ICMP Traffic 
   </h3>
 
 - Run the command "ping (windows 10 VM ip address) -t"
@@ -294,7 +295,7 @@
       
 ![image](https://github.com/user-attachments/assets/43a3974c-f53b-439d-b05c-03de281b46e2)
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  
 <h3> STEP 5.0: Start a New Packet Capture in Wireshark and Filter for DNS Traffic. </h3>
