@@ -168,7 +168,7 @@
 
 - Open the command prompt or powershell to run the command "ping (windows 10 vm ip address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
-  - The "-t" parameter will run the ping command perpetually/non-stop until it is manually (Ctrl + C)
+  - The "-t" parameter will run the ping command perpetually/non-stop until it is manually stopped (Ctrl + C)
 
 ![image](https://github.com/user-attachments/assets/4ec8af7d-56ad-4082-9849-422ecb15485a)
 
