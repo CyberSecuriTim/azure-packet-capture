@@ -14,7 +14,7 @@
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDP, DNS, HTTP/S, ICMP)
+- Various Network Protocols (SSH, RDP, DNS, DHCP, ICMP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
@@ -322,9 +322,12 @@
 
 - Enter "tcp.port == 3389" into the wireshark display filter.
   - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on tcp port 3389.
+  - I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM for privacy concerns,
+    as that is the public IP address associated with my host computer.
 
-- I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM for privacy concerns,
-   as that is the public IP address associated with my host computer. 
+
+- Observe that there is a constant flow of network traffic being captured by wireshark while filtering for RDP traffic.
+  - As you might have guessed, this is due to us establishing an active RDP connection to this VM from our host computer. 
 
 ![image](https://github.com/user-attachments/assets/55e9dbc7-e6e2-4be2-b1c5-381892c420fc)
 
