@@ -175,7 +175,7 @@
 
 - Observe the ICMP packets that were captured and displayed by wireshark 
 - Notice that the source IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
-  echo (ping) requests and vice versa for ICMP echo (ping) replies
+  Echo (ping) requests and vice versa for ICMP Echo (ping) replies
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.66: Attempt to Ping a Public IP address/domain such as Google's Domain (www.google.com) and Observe the ICMP Traffic in Wireshark </h3>
@@ -244,14 +244,15 @@
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
    - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM.
-           - Notice SSH traffic is already being captured before we even access to the ubuntu VM's CLI.
+           - Notice SSH traffic is already being captured before even accessing the ubuntu VM's CLI.
 
 
 - Type "yes" to continue the connection process
    - Enter the password for the local admin account (NOTE: the password will not be visible while typing)
  
 
-- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout the session. 
+- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout 
+ the session. 
 
 
 ![image](https://github.com/user-attachments/assets/bddf8897-def5-4093-990c-6beae97eba46)
@@ -284,7 +285,7 @@
 
 <h4> OPTIONAL STEP: If you would like to observe the entire DHCP process captured in Wireshark enter the command "ipconfig /release | ipconfig /renew"</h4>
 
-- NOTE: (Do freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
+- NOTE: (Don't freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
    assigned network parameters and then immediately requests a new IP address and other DHCP assigned network configurations from the DHCP server.
      - You should be automatically reconnected afterwards.
      - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA":
@@ -303,7 +304,7 @@
 - Enter "dns" or "upd.port == 53" in the Wireshark search filter.
    - The DNS (Domain Name System) service commonly runs on UDP port 53
 
-- From the command prompt, run the command "nslookup (domain name)" to perform DNS lookups for the IP addresses of various domains (such as goole.com, facebook.com, dinsey.com 
+- From the command prompt, run the command "nslookup (domain name)" to perform DNS lookups for the IP addresses of various domains (such as goole.com, facebook.com, disney.com 
    etc.)
 
 - Observe the DNS traffic that is captured in Wireshark. 
@@ -321,7 +322,7 @@
 <h3> STEP 6.0: Initiate a New Packet Capture in Wireshark and Filter for RDP Traffic. </h3>
 
 - Enter "tcp.port == 3389" into the wireshark display filter.
-  - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on tcp port 3389.
+  - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on TCP port 3389.
   - I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM for privacy concerns,
     as that is the public IP address associated with my host computer.
 
