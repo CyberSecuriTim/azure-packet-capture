@@ -322,7 +322,7 @@
 - Enter "tcp.port == 3389" into the wireshark display filter.
   - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on tcp port 3389.
 
-- I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM as that is the public IP address associated with my computer (for privacy 
-  concerns) 
+- I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM for privacy concerns,
+   as that is the public IP address associated with my host computer. 
 
 ![image](https://github.com/user-attachments/assets/55e9dbc7-e6e2-4be2-b1c5-381892c420fc)
