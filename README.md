@@ -155,7 +155,7 @@
 <h3> STEP 2.0: Open Wireshark and Filter for ICMP Network Traffic.</h3>
 
 - Open wireshark and filter for ICMP traffic exclusively.
-  -This is the network protocol that the "ping" command line utility uses to perform its network diagnostic/troubleshooting operations  
+  - This is the network protocol that the "ping" command line utility uses to perform its network diagnostic/troubleshooting operations  
   - Right click the "Ethernet" network interface and select "Start capture"
   - Enter "icmp" in the wireshark search filter.
 
