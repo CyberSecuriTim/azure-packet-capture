@@ -342,7 +342,7 @@
 
 <h3> 
  
- PS: Don't forget to delete your computing resources in Azure once you are completely finished with the lab to avoid incurring unneccesary costs. Just access 
+ PS: Don't forget to delete your computing resources in Azure once you are completely finished with the lab to avoid incurring unnecessary costs. Just access 
  the [Azure Portal](https://portal.azure.com) and delete the resource group(s) which contain all your Azure resources.
 
 </h3>
