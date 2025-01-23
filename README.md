@@ -173,9 +173,9 @@
 
 
 
-- Notice all the ICMP packets that were captured and displayed by wireshark 
-- Observe the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP echo (ping) 
-  requests and vice versa for ICMP echo (ping) replies
+- Observe the ICMP packets that were captured and displayed by wireshark 
+- Notice that the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
+  echo (ping) requests and vice versa for ICMP echo (ping) replies
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.66: Attempt to Ping a Public IP address/domain such as Google's Domain (www.google.com) and Observe the ICMP Traffic in Wireshark </h3>
