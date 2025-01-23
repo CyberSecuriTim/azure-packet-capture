@@ -333,3 +333,7 @@
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+<h2> Congratulations! You have made it to the end of this lab and hopefully now have a better understanding of how packet capture and traffic/protocol analysis works at a fundamental level. Happy (packet) sniffing!👃</h2>
