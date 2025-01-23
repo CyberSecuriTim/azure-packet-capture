@@ -118,7 +118,7 @@
 <h3> STEP 1.60: Observe the Topology of the created Virtual Network within the Network Watcher </h3>
 
 - From the home page of the Azure portal:
-  - Navigate to "Virtual Network" > (Name of the virtual network)
+  - Navigate to "Virtual Networks" > (Name of the virtual network)
     - Select Monitoring > Diagram
 
 - Verify that both VM's are connected within the same subnet.
