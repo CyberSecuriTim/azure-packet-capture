@@ -23,7 +23,7 @@
 
 <h2>High-Level Steps</h2>
 
-- Step 1: Create your Windows 10 and Ubuntu VM's (place them in the same Vnet and subnet)
+- Step 1: Create your Windows 10 and Ubuntu VMs (place them in the same Vnet and subnet)
 - Step 2: Observe ICMP Traffic 
 - Step 3: Observe SSH Traffic
 - Step 4: Observe DHCP Traffic
@@ -45,7 +45,7 @@
 
   ![image](https://github.com/user-attachments/assets/2a99d7d7-3253-442e-94a9-04bd06e0641a)
 
-    - Set the VM's Size to be at least 2 Virtual CPU's (vcpu's) and 8 GiB (gigabytes) of memory.
+    - Set the VM's Size to be at least 2 Virtual CPUs (vCPUs) and 8 GiB (gigabytes) of memory.
     - Assign the credentials to the local administrator account that will be created for this VM.
     - Ensure TCP port 3389 is selected as an allowed inbound port (this will enable us to establish a remote desktop connection to this VM)
 
@@ -53,8 +53,8 @@
 
     
 - Navigate to the "Networking" tab:
-    - Create a new Virtual Network (Vnet) and subnet
-    - Ignore the security warning regarding exposing the RDP port for now to all IP addresses on the internet we will restrict the source IP addresses that can 
+    - Create a new Virtual Network (VNet) and subnet
+    - Ignore the security warning regarding exposing the RDP port to all IP addresses on the internet we will restrict the source IP addresses that can 
        access this VM via RDP in a later step. 
 
   ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
