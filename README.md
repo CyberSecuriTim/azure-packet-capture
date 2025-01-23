@@ -55,7 +55,8 @@
     
 - Navigate to the "Networking" tab:
     - Create a new Virtual Network (Vnet) and subnet
-    - Ignore the security warning regarding exposing the RDP port to all IP addresses on the internet we will filter IP addresses in a later step. 
+    - Ignore the security warning regarding exposing the RDP port for now to all IP addresses on the internet we will restrict the source IP addresses that can 
+       access this VM via RDP in a later step. 
 
   ![image](https://github.com/user-attachments/assets/f5914c09-e494-489f-9eb0-548f2d80e0a8)
 
