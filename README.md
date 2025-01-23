@@ -29,8 +29,7 @@
 - Step 3: Observe SSH Traffic
 - Step 4: Observe DHCP Traffic
 - Step 5: Observe DNS Traffic
-- Step 6: Observe HTTP vs HTTPS traffic
-- Step 7: Observe RDP Traffic
+- Step 6: Observe RDP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -235,7 +234,7 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
- <h3> STEP 3.0: Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark Filtering for SSH traffic. </h3>
+ <h3> STEP 3.0: Establish an SSH connection from the Windows 10 VM to the Ubuntu VM and Initiate a New Packet Capture in Wireshark, Filtering for SSH traffic. </h3>
 
 - NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface (CLI) of a remote host via a network connection.
 
@@ -316,3 +315,14 @@
 
 ![image](https://github.com/user-attachments/assets/825ab05a-84c8-42d2-80f3-a769090296c5)
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h3> STEP 6.0: Initiate a New Packet Capture in Wireshark and Filter for RDP Traffic. </h3>
+
+- Enter "tcp.port == 3389" into the wireshark display filter.
+  - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on tcp port 3389.
+
+- I have blurred the instances of the client IP address connecting to the Windows 10 VM as that is the public IP address associated with my computer (for privacy 
+  concerns) 
+
+![image](https://github.com/user-attachments/assets/54a46528-5888-4a33-b86c-96c0091cdfb4)
