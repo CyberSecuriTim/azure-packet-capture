@@ -67,11 +67,11 @@
 
 - Once the VM is created, navigate to its Network settings select the RDP rule configured in its Network Security Group ruleset.
   - Change the allowed source IP addresses from any to "My IP address" to restrict the RDP connection to only originate from your current IP address
-  - Or you could select "IP Addresses" and specify an IP address(s) that you would like to connect from.
+  - Or you could select "IP Addresses" and specify an IP address(es) that you would like to connect from.
  
 ![image](https://github.com/user-attachments/assets/8364fb65-a882-462e-8d9c-7a6a87073f5c)
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 1.30: Create the Ubuntu Virtual Machine. </h3>
 
@@ -174,7 +174,7 @@
 
 
 - Observe the ICMP packets that were captured and displayed by wireshark 
-- Notice that the soure IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
+- Notice that the source IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
   echo (ping) requests and vice versa for ICMP echo (ping) replies
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
