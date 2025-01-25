@@ -6,7 +6,7 @@
 
 - In this tutorial, we will observe network traffic of various protocol types being transmitted to and from Azure Virtual Machines using Wireshark as well as experimenting with Network Security Groups. <br />
 
-- NOTE: Network Security Groups (NSGs) are essentially access control lists that contain statically configured rules which regulate access to and from various computing resources in Azure.
+- NOTE: Network Security Groups (NSGs) are essentially access control lists that contain statically configured rules that regulate access to and from various computing resources in Azure.
 
 <h2>Environments and Technologies Used</h2>
 
@@ -65,7 +65,7 @@
 
 <h3> STEP 1.15: Harden the Windows 10 VM by Restricting the Source IP Addresses that can Connect to it via RDP </h3>
 
-- Once the VM is created, navigate to its Network settings select the RDP rule configured in its Network Security Group ruleset.
+- Once the VM is created, navigate to its Network settings and select the RDP rule configured in its Network Security Group ruleset.
   - Change the allowed source IP addresses from any to "My IP address" to restrict the RDP connection to only originate from your current IP address
   - Or you could select "IP Addresses" and specify an IP address(es) that you would like to connect from.
  
@@ -120,7 +120,7 @@
   - Navigate to "Virtual Networks" > (Name of the virtual network)
     - Select Monitoring > Diagram
 
-- Verify that both VM's are connected within the same subnet.
+- Verify that both VMs are connected within the same subnet.
 
 ![image](https://github.com/user-attachments/assets/ec570eea-a7bc-47a9-865e-0bc1c1974adc)
 
@@ -153,10 +153,10 @@
 
 <h3> STEP 2.0: Open Wireshark and Filter for ICMP Network Traffic.</h3>
 
-- Open wireshark and filter for ICMP traffic exclusively.
+- Open Wireshark and filter for ICMP traffic exclusively.
   - This is the network protocol that the "ping" command line utility uses to perform its network diagnostic/troubleshooting operations  
-  - Right click the "Ethernet" network interface and select "Start capture"
-  - Enter "icmp" in the wireshark search filter.
+  - Right-click the "Ethernet" network interface and select "Start capture"
+  - Enter "icmp" in the Wireshark search filter.
 
 ![image](https://github.com/user-attachments/assets/9f1656d6-c097-4359-a31f-79e0eee09e8b)
 
@@ -165,7 +165,7 @@
 
 <h3> STEP 2.33: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
 
-- Open the command prompt or powershell to run the command "ping (windows 10 vm ip address) -t"
+- Open the command prompt or PowerShell to run the command "ping (windows 10 VM IP address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
   - The "-t" parameter will run the ping command perpetually/non-stop until it is manually stopped (Ctrl + C)
 
@@ -173,14 +173,14 @@
 
 
 
-- Observe the ICMP packets that were captured and displayed by wireshark 
-- Notice that the source IP address is the same IP address as the windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
+- Observe the ICMP packets that were captured and displayed by Wireshark 
+- Notice that the source IP address is the same IP address as the Windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
   Echo (ping) requests and vice versa for ICMP Echo (ping) replies
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3> STEP 2.66: Attempt to Ping a Public IP address/domain such as Google's Domain (www.google.com) and Observe the ICMP Traffic in Wireshark </h3>
 
-- Restart the wireshark packet capture
+- Restart the Wireshark packet capture
 - Run the command "ping www.google.com"
 
   ![image](https://github.com/user-attachments/assets/e87e3cac-b045-4c10-b815-2eda3918d5e8)
@@ -193,13 +193,13 @@
    ICMP Traffic 
   </h3>
 
-- Run the command "ping (windows 10 VM ip address) -t"
+- Run the command "ping (windows 10 VM IP address) -t"
 - Initiate another ICMP packet capture in Wireshark as well. 
 
 ![image](https://github.com/user-attachments/assets/24a2a509-7503-4dca-8d0c-10f89f844194)
 
 
-- Within the Azure portal, access the network settings for the Ubuntu VM and create a new inbound port rule within its network security group (NSG). 
+- Within the [Azure portal](https://portal.azure.com), access the network settings for the Ubuntu VM and create a new inbound port rule within its network security group (NSG). 
 
 ![image](https://github.com/user-attachments/assets/a9075852-3206-48bf-95d0-935c97ebca89)
 
