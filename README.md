@@ -99,7 +99,8 @@
 
    - "Review + Create", once the validation has successfully passed then create the VM.
      - NOTE: you may receive this error message, simply return to the Basics tab and verify the configuration then "Review + Create" again.
-       ![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
+
+![image](https://github.com/user-attachments/assets/26ff24d5-2fbe-43d5-87de-b71656bbb3ab)
        
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -174,7 +175,7 @@
 
 
 - Observe the ICMP packets that were captured and displayed by Wireshark 
-- Notice that the source IP address is the same IP address as the Windows 10 VM (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
+- Notice that the source IP address is the same as the Windows 10 VM's IP address (10.0.0.4) and the destination IP address is the Ubuntu VM's IP address for ICMP 
   Echo (ping) requests and vice versa for ICMP Echo (ping) replies
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -185,7 +186,7 @@
 
   ![image](https://github.com/user-attachments/assets/e87e3cac-b045-4c10-b815-2eda3918d5e8)
 
-  - Observe the source and destination IP addresses for ping requests and echoes respectively.
+  - Observe the source and destination IP addresses for ping requests and replies respectively.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -193,7 +194,7 @@
    ICMP Traffic 
   </h3>
 
-- Run the command "ping (windows 10 VM IP address) -t"
+- Run the command "ping (Ubuntu VM IP address) -t"
 - Initiate another ICMP packet capture in Wireshark as well. 
 
 ![image](https://github.com/user-attachments/assets/24a2a509-7503-4dca-8d0c-10f89f844194)
