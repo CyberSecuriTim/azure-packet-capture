@@ -166,7 +166,7 @@
 
 <h3> STEP 2.33: Retrieve the Private IP Address of the Ubuntu VM from the Azure Portal and Attempt to Ping it (Perpetually) From the Windows 10 VM. </h3>
 
-- Open the command prompt or PowerShell to run the command "ping (windows 10 VM IP address) -t"
+- Open the command prompt or PowerShell to run the command "ping (Ubuntu VM IP address) -t"
   - My Ubuntu VM's private IP address is 10.0.0.5
   - The "-t" parameter will run the ping command perpetually/non-stop until it is manually stopped (Ctrl + C)
 
@@ -218,12 +218,12 @@
 ![image](https://github.com/user-attachments/assets/520fc9fb-3bb5-4267-825e-0b6d8fa231ca)
 
 
-- Observe the ICMP echo (ping) requests being blocked by the NSG in real time.
+- Observe the ICMP echo (ping) requests being blocked by the NSG in real-time.
 
 ![image](https://github.com/user-attachments/assets/7baf98c9-0dd8-457e-8fa1-ead805f6e9e0)
 
 
-- Finally, Re-enable inbound ICMP traffic to the ubuntu VM by deleting the newly created NSG rule (or modifying it to allow ICMP traffic) in the Azure portal
+- Finally, Re-enable inbound ICMP traffic to the Ubuntu VM by deleting the newly created NSG rule (or modifying it to allow ICMP traffic) in the Azure portal
 
 ![image](https://github.com/user-attachments/assets/65710b93-049d-4e49-9cec-073c987b6ed6)
 
@@ -231,7 +231,7 @@
 
 ![image](https://github.com/user-attachments/assets/a8d8c253-eb8d-4816-80c0-8337822edb65)
 
-- NOTE: Stop the perpetual ping on your windows 10 VM by entering (Ctrl + C)
+- NOTE: Stop the perpetual ping on your Windows 10 VM by entering (Ctrl + C)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -240,19 +240,19 @@
 
 - NOTE: The SSH (secure shell) protocol facilitates the establishment of secure, encrypted access to the command line interface (CLI) of a remote host via a network connection.
 
-- Enter "tcp.port == 22" or "ssh" in the wireshark search filter.
-  - SSH uses tcp port 22 for its remote connections
+- Enter "tcp.port == 22" or "ssh" in the Wireshark search filter.
+  - SSH uses TCP port 22 for its remote connections
 
 - Open the command prompt and run the command "ssh (ubuntu-vm-admin username)@(ubuntu-vm private IP address)
-   - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection the Ubuntu VM.
-           - Notice SSH traffic is already being captured before even accessing the ubuntu VM's CLI.
+   - I entered "ssh ubuntu-vm-admin@10.0.0.5" to establish the SSH connection to the Ubuntu VM.
+           - Notice SSH traffic is already being captured before even accessing the Ubuntu VM's CLI.
 
 
 - Type "yes" to continue the connection process
    - Enter the password for the local admin account (NOTE: the password will not be visible while typing)
  
 
-- You now have access to the command line interface of this ubuntu VM. Run a few linux commands and observe the SSH packets being captured by wireshark throughout 
+- You now have access to the command line interface of this Ubuntu VM. Run a few Linux commands and observe the SSH packets being captured by wireshark throughout 
  the session. 
 
 
@@ -269,25 +269,25 @@
 
 <h3> STEP 4.0: Initiate a New Packet Capture in Wireshark and Filter for DHCP (Dynamic Host Configuration Protocol) traffic. </h3>
 
-- Enter either "dhcp", "udp.port == 67" or "udp.port == 68" or "udp.port == 67 || upd.port == 68" in the wireshark filter.
-   - DHCP servers use UDP port 67 for communication and DHCP clients use UDP port 68, so filtering using either port number will display DHCP the communication.
+- Enter either "dhcp", "udp.port == 67" or "udp.port == 68" or "udp.port == 67 || upd.port == 68" in the wireshark search filter.
+   - DHCP servers use UDP port 67 for communication and DHCP clients use UDP port 68, so filtering using either port number (or both) will display the DHCP communication.
  
-<h4> OPTIONAL STEP: Enter the command "ipconfig /all" in command prompt or powershell and observe the IP address of the DHCP server. </h4>
+<h4> OPTIONAL STEP: Enter the command "ipconfig /all" in the command prompt or PowerShell and observe the IP address of the DHCP server. </h4>
 
 ![image](https://github.com/user-attachments/assets/86e053ec-724d-42b7-9cf2-8617d4e1a4ba)
 
 
 - Now, enter the command "ipconfig /renew" and observe the captured DHCP traffic
    - This command simply renews the lease of the IP address that the DHCP client (our Windows 10 VM) received from the DHCP server.
-   - NOTE: The same IP address that we observed from the "ipconfig /all" command as the DHCP server appears here in the captured DHCP traffic. 
+   - NOTE: The same IP address that we observed from the "ipconfig /all" command for the DHCP server appears here in the captured DHCP traffic. 
 
 
    ![image](https://github.com/user-attachments/assets/bf9a1b88-1885-44e5-bbfa-86d0dabc30e9)
 
 <h4> OPTIONAL STEP: If you would like to observe the entire DHCP process captured in Wireshark enter the command "ipconfig /release | ipconfig /renew"</h4>
 
-- NOTE: (Don't freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP 
-   assigned network parameters and then immediately requests a new IP address and other DHCP assigned network configurations from the DHCP server.
+- NOTE: (Don't freak out! 😅)You will temporarily lose connection to the VM via RDP as when this command is executed the VM essentially releases its IP address and other DHCP-assigned 
+ network parameters and then immediately requests a new IP address and other DHCP-assigned network configurations from the DHCP server.
      - You should be automatically reconnected afterwards.
      - This will give us the chance to capture all four stages of the DHCP process known as DHCP "DORA":
         1. Discover
@@ -305,7 +305,7 @@
 - Enter "dns" or "upd.port == 53" in the Wireshark search filter.
    - The DNS (Domain Name System) service commonly runs on UDP port 53
 
-- From the command prompt, run the command "nslookup (domain name)" to perform DNS lookups for the IP addresses of various domains (such as goole.com, facebook.com, disney.com 
+- From the command prompt, run the command "nslookup (domain name)" to perform DNS lookups for the IP addresses of various domains (such as google.com, facebook.com, disney.com 
    etc.)
 
 - Observe the DNS traffic that is captured in Wireshark. 
@@ -325,7 +325,7 @@
 - Enter "tcp.port == 3389" into the wireshark display filter.
   - The Remote Desktop Protocol server software (running on our Windows 10 Azure VM) "listens" on TCP port 3389.
   - I have blurred the multiple appearances of the client's IP address connecting to the Windows 10 VM for privacy concerns,
-    as that is the public IP address associated with my host computer.
+    as that is the public IP address associated with the computer I used to perform this lab.
 
 
 - Observe that there is a constant flow of network traffic being captured by wireshark while filtering for RDP traffic.
@@ -343,7 +343,7 @@
 
 <h3> 
  
- PS: Don't forget to delete your computing resources in Azure once you are completely finished with the lab to avoid incurring unnecessary costs. Just access 
+ PS: Don't forget to delete your computing resources in Azure once you are finished with the lab to avoid incurring unnecessary costs. Just access 
  the [Azure Portal](https://portal.azure.com) and delete the resource group(s) which contain all your Azure resources.
 
 </h3>
